@@ -24,6 +24,13 @@ namespace Jeff
             }
 
         }
+
+        private void Start()
+        {
+            Physics2D.IgnoreLayerCollision(3, 6);
+            Physics2D.IgnoreLayerCollision(6, 6);
+            Physics2D.IgnoreLayerCollision(6, 7);
+        }
         private void Update()
         {
             SpawnWeapon();
@@ -37,7 +44,16 @@ namespace Jeff
 
             if (timer >= dataweapon.interval)
             {
-                print("生成武器");
+                //print("生成武器");
+
+                int random = Random.Range(0, dataweapon.v3SpawnPoint.Length);
+
+                Vector3 pos = transform.position + dataweapon.v3SpawnPoint[random];
+
+                GameObject temp = Instantiate(dataweapon.goWeapon, pos, Quaternion.identity);
+
+                temp.GetComponent<Rigidbody2D>().AddForce(dataweapon. v3Direction* dataweapon.speed);
+
                 timer = 0;
             }
         }

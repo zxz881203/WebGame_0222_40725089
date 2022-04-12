@@ -19,5 +19,9 @@ namespace Jeff
         public float interval = 3.5f;
         [Header("生成位置")]
         public Vector3[ ] v3SpawnPoint;
+        [Header("武器預置物")]
+        public GameObject goWeapon;
+        [Header("飛行方向")]
+        public Vector3 v3Direction;
     }
 }
