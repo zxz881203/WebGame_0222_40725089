@@ -8,6 +8,8 @@ namespace Jeff
     {
         [SerializeField, Header("武器資料")]
         private DW dataweapon;
+        private Animator ATK;
+
 
         private float timer;
 
@@ -30,6 +32,7 @@ namespace Jeff
             Physics2D.IgnoreLayerCollision(3, 6);
             Physics2D.IgnoreLayerCollision(6, 6);
             Physics2D.IgnoreLayerCollision(6, 7);
+            ATK = gameObject.GetComponent<Animator>();
         }
         private void Update()
         {
@@ -39,12 +42,13 @@ namespace Jeff
         private void SpawnWeapon()
         {
             timer += Time.deltaTime;
+            ATK.SetBool("開關攻擊", false);
 
            // print("經過時間:" + timer);
 
             if (timer >= dataweapon.interval)
             {
-                //print("生成武器");
+                ATK.SetBool("開關攻擊", true);
 
                 int random = Random.Range(0, dataweapon.v3SpawnPoint.Length);
 
@@ -56,6 +60,9 @@ namespace Jeff
 
                 timer = 0;
             }
+
+            
         }
+       
     }
 }
