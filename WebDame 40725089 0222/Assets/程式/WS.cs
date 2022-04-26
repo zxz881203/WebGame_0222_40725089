@@ -10,6 +10,9 @@ namespace Jeff
         private DW dataweapon;
         private Animator ATK;
 
+        [SerializeField, Header("武器刪除時間"), Range(0, 10)]
+        private float destoryWeaponTime = 3.5f;
+
 
         private float timer;
 
@@ -59,6 +62,8 @@ namespace Jeff
                 temp.GetComponent<Rigidbody2D>().AddForce(dataweapon. v3Direction* dataweapon.speed);
 
                 timer = 0;
+
+                Destroy(temp, destoryWeaponTime);
             }
 
             

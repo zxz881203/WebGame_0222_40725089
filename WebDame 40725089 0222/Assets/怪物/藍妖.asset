@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb173d464395994f8cd49d99626f260, type: 3}
-  m_Name: "\u98DB\u5200"
-  m_EditorClassIdentifier: Assembly-CSharp:Jeff:Dataweapon
-  speed: 750
-  attack: 5
-  countStart: 5
-  countMax: 15
-  interval: 2.5
-  v3SpawnPoint: []
+  m_Script: {fileID: 11500000, guid: b0618a4374c349c45a43f9762fe41bcf, type: 3}
+  m_Name: "\u85CD\u5996"
+  m_EditorClassIdentifier: 
+  speed: 5
+  attack: 10
+  cd: 3.5
+  hp: 100
+  expDropProbability: 0.8
+  typeExp: 0
