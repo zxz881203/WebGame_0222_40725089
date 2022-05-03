@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8965680786527531441}
   - component: {fileID: 6568794929220523847}
   - component: {fileID: 8726025157910933005}
+  - component: {fileID: 2204073959524310614}
   m_Layer: 6
-  m_Name: '#1 - Transparent Icons_119'
+  m_Name: "\u65A7\u982D"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,3 +135,16 @@ ConstantForce2D:
   m_Force: {x: 0, y: 0}
   m_RelativeForce: {x: 0, y: 0}
   m_Torque: -120
+--- !u!114 &2204073959524310614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410699804576794615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca19b02b9c4fc874dabfa954bcd435c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0

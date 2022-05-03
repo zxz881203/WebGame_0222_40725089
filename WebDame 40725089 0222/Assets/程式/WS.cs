@@ -64,6 +64,8 @@ namespace Jeff
                 timer = 0;
 
                 Destroy(temp, destoryWeaponTime);
+
+                temp.GetComponent<W>().attack = dataweapon.attack;
             }
 
             
